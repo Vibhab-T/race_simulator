@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkqrn4sbbfahw"]
+
+[ext_resource type="Script" path="res://scripts/carScene.gd" id="1_m6wfq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g6ajp"]
+radius = 5.0
+
+[node name="Car" type="Node2D"]
+script = ExtResource("1_m6wfq")
+
+[node name="CarArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarArea"]
+shape = SubResource("CircleShape2D_g6ajp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -0.242236
+offset_top = -0.667702
+offset_right = 6.75776
+offset_bottom = 22.3323
+scale = Vector2(1.13936, 0.857824)

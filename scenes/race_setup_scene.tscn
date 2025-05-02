@@ -1,0 +1,143 @@
+[gd_scene load_steps=2 format=3 uid="uid://fi33tl4s8icl"]
+
+[ext_resource type="Script" path="res://scripts/race_setup.gd" id="1_e5p6t"]
+
+[node name="RaceSetupScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RaceSetup" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -578.0
+offset_top = -323.0
+offset_right = 577.0
+offset_bottom = 322.0
+script = ExtResource("1_e5p6t")
+
+[node name="Race" type="Button" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.0
+offset_top = -114.0
+offset_right = 103.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 77
+text = "Race!"
+
+[node name="PositionStartLabel" type="Label" parent="RaceSetup"]
+layout_mode = 1
+offset_top = 49.0
+offset_right = 469.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 55
+text = "Starting Position: "
+
+[node name="TyreStartLabel" type="Label" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -38.0
+offset_right = 469.0
+offset_bottom = 38.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 55
+text = "Starting Tyre: "
+
+[node name="PosDown" type="Button" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.5
+offset_top = 168.0
+offset_right = -55.5
+offset_bottom = 237.0
+grow_horizontal = 2
+rotation = -1.5708
+theme_override_font_sizes/font_size = 44
+text = "<
+"
+
+[node name="TyreDown" type="Button" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.5
+offset_top = 409.0
+offset_right = -55.5
+offset_bottom = 478.0
+grow_horizontal = 2
+rotation = -1.5708
+theme_override_font_sizes/font_size = 44
+text = "<
+"
+
+[node name="PosUp" type="Button" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.5
+offset_right = 16.5
+offset_bottom = 69.0
+grow_horizontal = 2
+rotation = -4.71239
+theme_override_font_sizes/font_size = 44
+text = "<
+"
+
+[node name="TyreUp" type="Button" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.5
+offset_top = 242.0
+offset_right = 16.5
+offset_bottom = 311.0
+grow_horizontal = 2
+rotation = -4.71239
+theme_override_font_sizes/font_size = 44
+text = "<
+"
+
+[node name="PositionStart" type="Label" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.5
+offset_top = 46.0
+offset_right = -30.5
+offset_bottom = 122.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 55
+text = "1"
+
+[node name="TyreStart" type="Label" parent="RaceSetup"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 286.0
+offset_right = -31.5
+offset_bottom = 362.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 55
+text = "S
+"
+
+[connection signal="pressed" from="RaceSetup/Race" to="RaceSetup" method="_on_race_pressed"]
+[connection signal="pressed" from="RaceSetup/PosDown" to="RaceSetup" method="_on_pos_down_pressed"]
+[connection signal="pressed" from="RaceSetup/TyreDown" to="RaceSetup" method="_on_tyre_down_pressed"]
+[connection signal="pressed" from="RaceSetup/PosUp" to="RaceSetup" method="_on_pos_up_pressed"]
+[connection signal="pressed" from="RaceSetup/TyreUp" to="RaceSetup" method="_on_tyre_up_pressed"]

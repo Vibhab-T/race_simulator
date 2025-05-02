@@ -1,0 +1,214 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd8csy2c3c6uo"]
+
+[ext_resource type="Script" path="res://scripts/track1.gd" id="1_rgnkl"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2r2ug"]
+a = Vector2(19, -1)
+b = Vector2(19, 51)
+
+[sub_resource type="Curve2D" id="Curve2D_fwr6d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 19, 207, 0, 0, 0, 0, -390, 201, 0, 0, 0, 0, -427, 188, 0, 0, 0, 0, -444, 159, 0, 0, 0, 0, -460, 109, 0, 0, 0, 0, -442, 64, 0, 0, 0, 0, -398, 35, 0, 0, 0, 0, -334, 46, 0, 0, 0, 0, -253, 79, 0, 0, 0, 0, -178, 107, 0, 0, 0, 0, -125, 120, 0, 0, 0, 0, -42, 99, 0, 0, 0, 0, 14, 60, 0, 0, 0, 0, 92, 2, 0, 0, 0, 0, 136, -46, 0, 0, 0, 0, 145, -80, 0, 0, 0, 0, 135, -96, 0, 0, 0, 0, 82, -120, 0, 0, 0, 0, -544, -244, 0, 0, 0, 0, -560, -264, 0, 0, 0, 0, -552, -272, 0, 0, 0, 0, -520, -265, 0, 0, 0, 0, -479, -263, 0, 0, 0, 0, -411, -236, 0, 0, 0, 0, -9, -235, 0, 0, 0, 0, 83, -227, 0, 0, 0, 0, 116, -218, 0, 0, 0, 0, 145, -208, 0, 0, 0, 0, 163, -194, 0, 0, 0, 0, 193, -142, 0, 0, 0, 0, 242, -95, 0, 0, 0, 0, 303, -62, 0, 0, 0, 0, 381, -12, 0, 0, 0, 0, 455, 52, 0, 0, 0, 0, 476, 81, 0, 0, 0, 0, 504, 148, 0, 0, 0, 0, 446, 175, 0, 0, 0, 0, 216, 197, 0, 0, 0, 0, 73, 204, 0, 0, 0, 0, 19, 207)
+}
+point_count = 40
+
+[node name="Track1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(429, 179, 214, 197, 1, 205, -395, 200, -426, 187, -444, 157, -459, 109, -438, 60, -396, 30, -329, 45, -242, 82, -174, 111, -123, 123, -46, 100, -1, 72, 107, -11, 137, -49, 147, -74, 141, -91, 80, -120, -1, -134, -547, -245, -560, -268, -507, -265, -477, -262, -450, -250, -411, -236, -376, -236, 1, -235, 89, -225, 135, -214, 159, -199, 171, -180, 193, -143, 214, -122, 245, -93, 307, -61, 376, -15, 433, 33, 469, 67, 487, 111, 505, 150, 471, 172, 429, 178)
+
+[node name="StartFinish" type="Area2D" parent="Line2D"]
+position = Vector2(-8, 177)
+
+[node name="StartFinishArea" type="CollisionShape2D" parent="Line2D/StartFinish"]
+position = Vector2(7, 5)
+shape = SubResource("SegmentShape2D_2r2ug")
+
+[node name="Startings" type="Node" parent="Line2D"]
+script = ExtResource("1_rgnkl")
+
+[node name="P1" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P1"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P2" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P2"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P3" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P3"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P4" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P4"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P5" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P5"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P6" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P6"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P7" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P7"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P8" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P8"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P9" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P9"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P10" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P10"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P11" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P11"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P12" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P12"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P13" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P13"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P14" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P14"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P15" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P15"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P16" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P16"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P17" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P17"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P18" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P18"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P19" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P19"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="P20" type="Path2D" parent="Line2D/Startings"]
+self_modulate = Color(0.899258, 0.899258, 0.899258, 1)
+curve = SubResource("Curve2D_fwr6d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Line2D/Startings/P20"]
+position = Vector2(19, 207)
+rotation = -3.12692
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -573.0
+offset_top = -325.0
+offset_right = 574.0
+offset_bottom = 321.0
+
+[node name="StartRaceBttton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -47.0
+offset_right = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Start Race"
+
+[connection signal="pressed" from="Control/StartRaceBttton" to="Line2D/Startings" method="_on_start_race_bttton_pressed"]

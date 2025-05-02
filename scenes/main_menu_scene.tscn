@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://s0ko0wcgm7gg"]
+
+[ext_resource type="Script" path="res://scripts/mainMenu.gd" id="1_2arjo"]
+
+[node name="MainMenuScene" type="Node2D"]
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -459.0
+offset_top = -176.0
+offset_right = 458.0
+offset_bottom = 207.0
+script = ExtResource("1_2arjo")
+
+[node name="Quit" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -139.0
+offset_top = -98.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 65
+text = "Quit"
+
+[node name="Play" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -98.0
+offset_right = 247.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 65
+text = "Play"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="MainMenu/Quit" to="MainMenu" method="_on_quit_pressed"]
+[connection signal="pressed" from="MainMenu/Play" to="MainMenu" method="_on_play_pressed"]
